@@ -38,7 +38,7 @@ matrix:
       deploy:
         provider: pages
         skip-cleanup: true
-        github-token: $G_TOKEN
+        github-token: $GITHUB_TOKEN
         local-dir: docs
         keep-history: false
 
