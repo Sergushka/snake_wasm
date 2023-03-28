@@ -1,3 +1,6 @@
 /target
-/out
-/dist
+**/*.rs.bk
+Cargo.lock
+
+.idea
+www/package-lock.json
