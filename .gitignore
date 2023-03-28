@@ -1,6 +1,7 @@
 /target
 **/*.rs.bk
 Cargo.lock
+/dist
 
 .idea
 www/package-lock.json
