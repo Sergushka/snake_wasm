@@ -159,8 +159,8 @@ pub fn size_scaling(
     let window = windows.get_single().expect("Window should be received");
     for (sprite_size, mut transform) in q.iter_mut() {
         transform.scale = Vec3::new(
-            sprite_size.width / ARENA_WIDTH as f32 * window.width() as f32,
-            sprite_size.height / ARENA_HEIGHT as f32 * window.height() as f32,
+            sprite_size.width / ARENA_WIDTH as f32 * window.width(),
+            sprite_size.height / ARENA_HEIGHT as f32 * window.height(),
             1.0,
         );
     }
@@ -177,8 +177,8 @@ pub fn position_translation(
     let window = windows.get_single().expect("Window should be received");
     for (pos, mut transform) in q.iter_mut() {
         transform.translation = Vec3::new(
-            convert(pos.x as f32, window.width() as f32, ARENA_WIDTH as f32),
-            convert(pos.y as f32, window.height() as f32, ARENA_HEIGHT as f32),
+            convert(pos.x as f32, window.width(), ARENA_WIDTH as f32),
+            convert(pos.y as f32, window.height(), ARENA_HEIGHT as f32),
             0.0,
         );
     }
