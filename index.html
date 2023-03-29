@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-          margin: 0;
-          background: linear-gradient(-45deg, #a6a6a6, #5ac05a, #262626, #a6a6a6);
-          background-size: 400% 400%;
-          animation: gradient 15s ease infinite;
-          height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        canvas {
-          background-color: white;
-        }
 
-        @keyframes gradient {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
-        }
-      </style>
-    <title>Snake</title>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <!-- Disable zooming: -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake</title>
+  <!-- config for our rust wasm binary. go to https://trunkrs.dev/assets/#rust for more customization -->
+  <link data-trunk rel="rust" data-wasm-opt="2" />
+  <!-- this is the base url relative to which other urls will be constructed. trunk will insert this from the public-url option -->
+  <base data-trunk-public-url />
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(-45deg, #a6a6a6, #5ac05a, #262626, #a6a6a6);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    canvas {
+      background-color: white;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+
 </head>
+
 </html>
